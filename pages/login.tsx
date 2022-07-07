@@ -1,11 +1,11 @@
 import React from "react";
 
 import Image from "next/image";
-import { Box, Grid, Stack, TextField,IconButton } from "@mui/material";
+import { Box, Grid, Stack, TextField, IconButton, Button } from "@mui/material";
 import { InputAdornment } from "@mui/material";
-import {useState} from "react";
+import { useState } from "react";
 function login() {
-  const [show_password,setShow_password] = useState(false);
+  const [show_password, setShow_password] = useState(false);
   return (
     <div>
       <Box sx={{ position: "absolute", right: 0, zIndex: -1 }}>
@@ -14,7 +14,6 @@ function login() {
           alt="curve"
           width={815}
           height={1020}
-          
         />
       </Box>
       <Grid container sx={{ position: "absolute", top: "30%", left: "10%" }}>
@@ -56,18 +55,24 @@ function login() {
               }}
             />
             <Box>
-              <Stack direction= "row" spacing={1}>
+              <Stack direction="row" spacing={1}>
                 <IconButton>
-                  <Image src ="/svg/login/icon/google.svg" width="34" height="34" />
+                  <Image
+                    src="/svg/login/icon/google.svg"
+                    width="34"
+                    height="34"
+                  />
                 </IconButton>
                 <IconButton>
-                  <Image src ="/svg/login/icon/github.svg" width="34" height="34" />
+                  <Image
+                    src="/svg/login/icon/github.svg"
+                    width="34"
+                    height="34"
+                  />
                 </IconButton>
-                
-
               </Stack>
             </Box>
-            
+            {/* <Button>login</Button> */}
           </Stack>
         </Grid>
       </Grid>
