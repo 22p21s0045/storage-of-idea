@@ -72,7 +72,19 @@ function login() {
                 </IconButton>
               </Stack>
             </Box>
-            {/* <Button>login</Button> */}
+            <Button
+              sx={{
+                background:
+                  "linear-gradient(142.29deg, #0068EC 21.8%, #00BBF9 73.22%);",
+                color: "white",
+                fontFamily: "Mitr",
+                fontWeight: "bold",
+                width: "15%",
+                height: "5vh",
+              }}
+            >
+              login
+            </Button>
           </Stack>
         </Grid>
       </Grid>
