@@ -3,13 +3,14 @@ import React from "react";
 import Image from "next/image";
 import { Box, Grid, Stack, TextField, IconButton, Button } from "@mui/material";
 import { InputAdornment } from "@mui/material";
-import useMediaQuery from '@mui/material/useMediaQuery';
-import { useTheme } from '@mui/material/styles';
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 import { useState } from "react";
+import Link from "next/link";
 function login() {
   const [show_password, setShow_password] = useState(false);
   const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.down('md'));
+  const matches = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <div>
       <Box sx={{ position: "absolute", right: 0, zIndex: -1 }}>
@@ -20,7 +21,7 @@ function login() {
           height={1020}
         />
       </Box>
-      <Grid container sx={{ position: "absolute", top: "30%", left: "10%" }} >
+      <Grid container sx={{ position: "absolute", top: "30%", left: "10%" }}>
         <Grid
           item
           xs={9}
@@ -58,6 +59,16 @@ function login() {
                 style: { fontFamily: "Mitr", color: "#D0D5DD" },
               }}
             />
+            <Box sx={{ position: "relative", left: "25%", top: 0 }}>
+              <Box sx={{paddinTop:0,marginTop:-2}}>
+              <Link href="/">
+                <a>forgot password</a>
+              </Link>
+
+              </Box>
+             
+            </Box>
+
             <Box>
               <Stack direction="row" spacing={1}>
                 <IconButton>
@@ -91,19 +102,30 @@ function login() {
             </Button>
           </Stack>
         </Grid>
-        
-        {matches?(
-          <Grid item sx={{position:"absolute",right:"15%",top:500}} xs ={12} sm ={12} md={6} lg ={6}>
-          <Image src="/svg/login/man-window.svg" width={565} height={870}  />
-        </Grid>
 
-        ):(
-          <Grid item sx={{position:"absolute",right:"15%",top:-200}} xs ={12} sm ={12} md={6} lg ={6}>
-          <Image src="/svg/login/man-window.svg" width={565} height={870}  />
-        </Grid>
-        )
-
-        }
+        {matches ? (
+          <Grid
+            item
+            sx={{ position: "absolute", right: "15%", top: 500 }}
+            xs={12}
+            sm={12}
+            md={6}
+            lg={6}
+          >
+            <Image src="/svg/login/man-window.svg" width={565} height={870} />
+          </Grid>
+        ) : (
+          <Grid
+            item
+            sx={{ position: "absolute", right: "15%", top: -200 }}
+            xs={12}
+            sm={12}
+            md={6}
+            lg={6}
+          >
+            <Image src="/svg/login/man-window.svg" width={565} height={870} />
+          </Grid>
+        )}
       </Grid>
     </div>
   );
