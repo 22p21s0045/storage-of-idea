@@ -31,7 +31,7 @@ function login() {
           sx={{
             backgroundColor: "#C7C6FA",
             borderRadius: "100px",
-            height: "50vh",
+            height: "55vh",
           }}
         >
           <Stack
@@ -60,7 +60,7 @@ function login() {
               }}
             />
             <Box sx={{ position: "relative", left: "25%", top: 0 }}>
-              <Box sx={{paddinTop:0,marginTop:-2}}>
+              <Box sx={{paddinTop:0,marginTop:-2,color: "#0000007D"}}>
               <Link href="/">
                 <a>forgot password</a>
               </Link>
@@ -100,7 +100,13 @@ function login() {
             >
               login
             </Button>
+            <Box sx={{ position: "relative", top: -15,color: "#0000007D" }}>
+            <Link href ="/">
+              <a>create account</a>
+            </Link>
+            </Box>
           </Stack>
+          
         </Grid>
 
         {matches ? (
